@@ -294,7 +294,11 @@ header {
     /* spec styles */
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start;  
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; 
   }
 
   .card {
