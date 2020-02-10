@@ -36,7 +36,7 @@ a.skip {
 }
 
 a.skip:focus {
-  top: 20px;
+  top:20px;
   color: black;
   text-decoration-style: solid;
 }
@@ -65,14 +65,13 @@ Keyframes for animation*/
 }
 
 @keyframes logo_wiggle {
-  0% {
+  from {
     width: 25px;
   }
-  100% {
+  to {
     width: 420px;
   }
 } 
-
 
 #logo {
   -webkit-animation-name: logo_wiggle;
@@ -82,19 +81,16 @@ Keyframes for animation*/
 }
 
 /* Cards! */
-/* parent */
 .pricing {
-  min-height: 500px;
-  /* spec styles */
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+    min-height: 500px;
+    /* spec styles */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
-/* child */
 .card {
   margin: 12px;
   background: #fff;
@@ -102,16 +98,17 @@ Keyframes for animation*/
   padding: 0 0 50px 0;
   /* spec styles */
   flex-basis: 400px;
+
 }
 
-.card > header{
+.card > header {
   background: #288080;
   border: 2px solid #45ADAD;
   padding: 20px 0;
   border-radius: 7px 7px 0 0;
 }
 
-.card > ul{
+.card > ul {
   list-style: none;
   padding: 0;
 }
@@ -121,7 +118,7 @@ Keyframes for animation*/
   margin: 20px auto;
 }
 
-.card button{
+.card button {
   width: 90%;
   height: 40px;
   border: 0;
@@ -132,13 +129,13 @@ Keyframes for animation*/
   font-size: 1em;
 }
 
-.card h3{
+.card h3 {
   font-size: 4em;
   color: white;
   text-align: center;
 }
 
-.card_big{
+.card_big {
   -webkit-transform: initial;
           transform: initial;
 }
@@ -149,12 +146,13 @@ Keyframes for animation*/
   min-height: 600px;
   /* spec styles */
   display: flex;
-  flex-flow: row wrap; /* direction || wrap */
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
-.gallery > img{
+.gallery > img {
   border: 10px #50C7C7 solid;
   margin: 10px;
   width: 300px;
@@ -167,7 +165,6 @@ header {
   /* spec styles */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   align-content: center;
 }
@@ -184,42 +181,62 @@ header {
   text-decoration: none;
 }
 
-.nav_item a:hover, a:focus{
+.nav_item a:hover, a:focus {
   color: #50C7C7;
   text-decoration: underline;
   -webkit-text-decoration-style: dotted;
-          text-decoration-style: dotted;
+  text-decoration-style: dotted;
 }
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 850px) {
 
   /* Cards! */
-  .card {
-    
+  /* parent container for card*/
+  .pricing {
+    flex-direction: row;
+    align-items: center;
   }
-
-  .card_big{
+  .card {
+    /* spec styles */
+    flex-basis: 225px;
+    align-items: center;
+  }
+  /* styling for the middle card $35 */
+  .card_big {
     -webkit-transform: scaleX(1.12);
-            transform: scaleX(1.12);
+    transform: scaleX(1.12);
   }
 
   /* Navbar */
 
-  header{
-    
+  header {
+    /* spec styles */
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  .nav_links{
-    
+  .nav_links {
+    /* spec styles */
+    flex-direction: row;
+    justify-content: space-around;
   }
 
-  .nav_item a{
+  .nav_item a {
     padding: 10px;
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  #logo {
+    animation: none;
+  }
+}
+
 @media print { 
-  
+  .pricing {
+
+  }
+
   .card {
     flex-basis: 200px;
   }
