@@ -93,8 +93,8 @@ Keyframes for animation*/
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -233,16 +233,16 @@ header {
   .pricing {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+            -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .card {
     /* spec styles */
-    -ms-flex-preferred-size: 225px;
-        flex-basis: 225px;
+    -ms-flex-preferred-size: 250px;
+        flex-basis: 250px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
